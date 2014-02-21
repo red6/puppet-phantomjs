@@ -56,7 +56,7 @@ class phantomjs {
   }
 
   # create a symlink for the binary
-  file { "/usr/bin/phantomjs":
+  file { "/usr/local/bin/phantomjs":
       ensure => "link",
       target => "/opt/phantomjs/bin/phantomjs",
       require   => File['link_phantomjs']
