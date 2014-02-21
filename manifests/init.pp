@@ -47,4 +47,19 @@ class phantomjs {
       require   => [Exec['get_phantomjs'], Class['phantomjs::deps']];
   }
 
+  # create a symlink
+  file { "link_phantomjs":
+      path => "/opt/phantomjs",
+      ensure => "link",
+      target => "$INSTALLDIR",
+      require   => Exec['install_phantomjs']
+  }
+
+  # create a symlink for the binary
+  file { "/usr/bin/phantomjs":
+      ensure => "link",
+      target => "/opt/phantomjs/bin/phantomjs",
+      require   => File['link_phantomjs']
+  }
+
 }
