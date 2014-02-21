@@ -27,7 +27,7 @@ class phantomjs {
   $TEMP = '/tmp'
   $NAME = 'phantomjs-1.9.7-linux-x86_64'
   $PACKAGE = "$NAME.tar.bz2"
-  $URL64BIT = "https://phantomjs.googlecode.com/files/$PACKAGE"
+  $URL64BIT = "https://bitbucket.org/ariya/phantomjs/downloads/$PACKAGE"
   $TEMPPACKAGE = "$TEMP/$PACKAGE"
   $OPT = '/opt'
   $INSTALLDIR = "$OPT/$NAME"
